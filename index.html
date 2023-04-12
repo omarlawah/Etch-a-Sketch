@@ -7,16 +7,20 @@
         <meta charset="UTF-8"/>
     </head>
     <body>
-        <h1>Etch-A-Sketch</h1>
+        <h1>Etch-A- Sketch</h1>
         <div id="container">
             <div class="btns">
                 <button class="choose">choose color</button>
                 <button class="rainbow">rainbow</button>
                 <button class="eraser">erase</button>
                 <button class="reset">reset</button>
-            </div>
+            </div>  
             <div class="pad"></div>
-        </div>
+            <form>
+                <p>resize: <span id="resize"></span></p>
+                <input type="range" min="10" max="64" oninput="updateSize(this.value)"/>
+            </form>
+        </div>    
     </body>
 </html>
 

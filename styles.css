@@ -15,15 +15,16 @@ h1 {
 }
 
 .pad {
-    display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
-    gap: 1px;
-    padding: 1px;
+    box-shadow: 2px 2px 2px 2px black;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    gap: 0;
     border: black solid 2px;
     width: 50%;
     height: 70%;
-    transform: translateY(20%);     
+    overflow: hidden;
+    transform: translateY(20%);    
 }
 
 #container{
@@ -39,10 +40,24 @@ h1 {
     flex-direction: row;
 }
 
-.gridItem {
+.box {
+    height: 100%;
+    width: 100%;
+    background-color: white;
     margin: 0;
-    padding: 0;
-  }
+    border: 1px solid white;
+}
+
+form  {
+    position: absolute;
+    top: 3%;
+    left: 57%;
+}
+
+form>p{
+    font-weight:700;
+    text-align: center;
+}
 
 .btns{
     display: flex;
@@ -69,4 +84,3 @@ div.btns>button.eraser:hover {
     color: white;
     background-color: black;
 }
-
