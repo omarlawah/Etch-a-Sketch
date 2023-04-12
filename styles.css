@@ -45,7 +45,8 @@ h1 {
     width: 100%;
     background-color: white;
     margin: 0;
-    border: 1px solid white;
+    padding: 0;
+    border:1px solid white;
 }
 
 form  {
