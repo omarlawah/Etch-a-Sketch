@@ -1,4 +1,4 @@
-alert("please make sure you resize the grid  before using it, thank you :)")
+//alert("please make sure you resize the grid  before using it, thank you :)")
 
 
 
@@ -6,9 +6,10 @@ let gridSize=0;
 let container = document.querySelector('.pad');
 container.style.display = "grid";
 let button1 = document.querySelector('.choose');
-let button2 = document.querySelector('.eraser');
-let button3 = document.querySelector('.rainbow');
+let button3 = document.querySelector('.eraser');
+let button2 = document.querySelector('.rainbow');
 let resetButton = document.getElementById('reset');
+let color = document.getElementById('color');
 
 function updateSize(val) {
     container.innerHTML=''; 
@@ -19,7 +20,6 @@ function updateSize(val) {
    return gridSize;
    }
    
-
 function drawGrid(){
     for(let i=0;i<gridSize * gridSize;i++){
         const div = document.createElement('div');
@@ -29,21 +29,23 @@ function drawGrid(){
           div.style.backgroundColor='black';
         });
         button1.addEventListener('click',function(){
+            color.classList.remove('hidden');
             div.addEventListener('mouseenter',()=>{
-                div.style.backgroundColor='blue';
-            })
+                color.classList.add('hidden');
+                function thisColor () {
+                    button1.style.backgroundColor=color.value;
+                    div.style.backgroundColor = color.value;
+                };
+                thisColor();
+            });
         });
-        button2.addEventListener('click',function(){
+        button3.addEventListener('click',function(){
             div.addEventListener('mouseenter',()=>{
                 div.style.backgroundColor='white';
             })
         });
-         
-
-
-    }}
- 
-
-resetButton.addEventListener('click',()=>{
-    document.location.reload();
-});      
+        resetButton.addEventListener('click',()=>{
+            div.style.backgroundColor='white';
+        });      
+    }};
+   
