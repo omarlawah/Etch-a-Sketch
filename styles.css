@@ -78,18 +78,6 @@ form>p{
     justify-content: space-around;
 }
 
-.apply{
-    position: absolute;
-    top: 40%;
-    left: 100%;
-    background-color: black;
-    color: white;
-    width: 60px;
-    height: 20px;
-    border:none;
-    border-radius: 3px;
-}
-
 button {
     font-family:fantasy;
     border-radius: 25px;
