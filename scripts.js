@@ -11,24 +11,6 @@ let button2 = document.querySelector('.rainbow');
 let resetButton = document.getElementById('reset');
 let color = document.getElementById('color');
 
-
-/*function randomColor() {
-    let color = [];
-    for (let i = 0; i < 3; i++) {
-      color.push(Math.floor(Math.random() * 256));
-    }
-    return 'rgb(' + color.join(', ') + ')';
-  } 
-  
-  document.addEventListener("mouseover", function(){
-    document.body.style.backgroundColor = randomColor();
-  });
-  
-  document.querySelector('div').addEventListener('mouseover', event => {
-        event.target.style.fill = randomColor();
-  });*/
-
-
 function updateSize(val) {
     container.innerHTML=''; 
     gridSize= document.getElementById('resize').textContent = val;     
@@ -36,9 +18,9 @@ function updateSize(val) {
     container.style.gridTemplateRows = `repeat(${gridSize},  minmax(0, 1fr))`;  
    drawGrid(val);
    return gridSize;
-   }
-   
+   };
 
+ 
 function drawGrid(){
     for(let i=0;i<gridSize * gridSize;i++){
         const div = document.createElement('div');
@@ -67,10 +49,6 @@ function drawGrid(){
                 div.style.backgroundColor= rainbowColor;})
             })
             
-           
-        
-                  
-
         button3.addEventListener('click',function(){
             div.addEventListener('mouseenter',()=>{
                 div.style.backgroundColor='white';
@@ -80,4 +58,5 @@ function drawGrid(){
             div.style.backgroundColor='white';
         });      
     }};
-   
+
+
